@@ -37,7 +37,7 @@
     var tipAmount = document.getElementById("tipAmount");
     
 	calculateButton.addEventListener("click", function calculate(){
-		var result = Number(totalAmount.value) * (Number(percentageTip.value) * 0.01);
+		var result = Math.round(Number(totalAmount.value) * (Number(percentageTip.value) * 0.01));
 		tipAmount.innerHTML = result;
 	});
 
