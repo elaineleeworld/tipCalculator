@@ -11,15 +11,20 @@ section {
     margin: 25px;
 }
 
+button {
+	width: 130px;
+	height: 40px;
+}
+
 
 #totalAmount {
-	width: 250px;
+	width: 270px;
 	height: 50px;
 	background-color: yellow;
 }
 
 #tipAmount {
-	width: 250px;
+	width: 270px;
 	height: 50px;
 	background-color: yellow;
 }
