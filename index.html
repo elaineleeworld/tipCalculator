@@ -9,52 +9,37 @@
 	<h1>Tip Calculator</h1>
 		<div>
 			<p>Enter Total Amount</p>
-				<input id="totalAmount" type="number" min="0" placeholder="$0.00" onkeypress="validate(event)">
+				<input id="totalAmount" type="number" min="0" placeholder="$0.00">
 		</div>
 
-		<!-- <button>Tip Percentage</button>
-		<button># of People</button> -->
 
 		<div>
 			<p>Enter Percentage Tip </p>
 				<input id="percentageTip" type="number" min="0" placeholder="$0.00">
 		</div>
 
+		<button id="calculateButton">Calculate</button>
+
 		<div>
-			<p>Result</p>
-				<input id="tipAmount" type="number" min="0" placeholder="$0.00">
+			<p id="tipAmount">Your Suggested Tip Amount</p>
+			 
 		</div>
 
 	</section>
 
 
 	<script type="text/javascript">
-		window.onload = function () {
-    document.getElementById("ID").innerHTML = "number";
+	
     
-
     var totalAmount = document.getElementById("totalAmount");
     var percentageTip = document.getElementById("percentageTip");
-    var resultTip = 
-
-    	function calculate() {
-    		resultTip = totalAmount * percentageTip
-    	}
-
-
-    // Javascript code to check number only input in calculator
-    // Javascript code to calculate percentage when button is clicked create a dropdown menu that allows
-    // user to choose tip percentage
-
-//     function calculatePercentage(how_much){
-//     	this.percentage = percentage;
-//     }
-
-
-
-// };
-
-
+    var calculateButton = document.getElementById("calculateButton");
+    var tipAmount = document.getElementById("tipAmount");
+    
+	calculateButton.addEventListener("click", function calculate(){
+		var result = Number(totalAmount.value) * (Number(percentageTip.value) * 0.01);
+		tipAmount.innerHTML = result;
+	});
 
 	</script>
 </body>
